@@ -45,11 +45,22 @@ Use Xcode 8.x to migrate the code to Swift 3.
 ```
 
 
-# ios -Swift.h not found
+## ios -Swift.h not found
 
 https://stackoverflow.com/questions/26328034/importing-project-swift-h-into-a-objective-c-class-file-not-found
 
 基本上是路径不对,试下导入的<>改成"",或者去掉前面的包名，如"AAA/BBB-Swift.h" 改成 "BBB-Swift.h"
+
+## ios Auto-Linking library not found for -libswiftFoundation
+https://stackoverflow.com/questions/50096025/it-gives-errors-when-using-swift-static-library-with-objective-c-project
+
+在项目中新建一个空白Swift文件，项目会自动创建桥接
+
+## The 'Pods-Runner' target has transitive dependencies
+swift项目可能会出现这个问题，解决方案：
+https://github.com/flutter/flutter/issues/14161
+
+Podfile去掉use_framework!
 
 
 # 编译release版本
