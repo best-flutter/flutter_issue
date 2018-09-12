@@ -65,6 +65,27 @@ Podfile去掉use_framework!
 
 # 编译release版本
 
+## 怎样在release模式下运行
+https://github.com/flutter/flutter/wiki/Flutter's-modes
+https://dartcode.org/docs/running-flutter-apps-in-profile-or-release-modes/
+
+
+```
+flutter run --release
+```
+或者
+在项目下床架配置文件:launch.json,dart必须v2.12以上
+```
+"configurations": [
+	{
+		"name": "Flutter",
+		"request": "launch",
+		"type": "dart",
+		"flutterMode": "profile"
+	}
+]
+```
+
 ## 真机运行报错couldn't find "libflutter.so"
 
 https://github.com/flutter/flutter/issues/18939
